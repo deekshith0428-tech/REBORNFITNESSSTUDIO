@@ -29,7 +29,7 @@ const trainers: Trainer[] = [
     name: 'Yasam Mohan Reddy',
     role: 'Personal Trainer',
     experience: '3+ years in personal training',
-    photo: 'public/images/trainers/YASAM MOHAN REDDY.png',
+    photo: '/images/trainers/YASAM MOHAN REDDY.png',
     alt: 'Yasam Mohan Reddy, personal trainer',
     introduction: 'Yasam Mohan Reddy helps members build strength, improve conditioning, and make sustainable progress through structured coaching and nutrition guidance.',
     qualifications: [
@@ -50,7 +50,7 @@ const trainers: Trainer[] = [
   {
     name: 'Shaik Mohammed Abuzar',
     experience: '9+ years',
-    photo: 'public/images/trainers/SHAIK MOHAMMED ABUZAR.png',
+    photo: '/images/trainers/SHAIK MOHAMMED ABUZAR.png',
     alt: 'Shaik Mohammed Abuzar',
     introduction: 'Shaik Mohammed Abuzar brings extensive experience and a broad range of recognised training and nutrition qualifications to Reborn Fitness Studio.',
     qualifications: [
@@ -70,7 +70,7 @@ const trainers: Trainer[] = [
   {
     name: 'KUSHI',
     experience: '2 years',
-    photo: 'public/images/trainers/Screenshot_2026-08-08_224634.png',
+    photo: '/images/trainers/KUSHI.png',
     alt: 'KUSHI',
     introduction: 'KUSHI is part of the Reborn coaching team with two years of experience and certified Level 4 training credentials.',
     qualifications: [
@@ -81,7 +81,7 @@ const trainers: Trainer[] = [
   {
     name: 'Angadi Hasan Basha',
     experience: '9 years',
-    photo: 'public/images/trainers/ANGADI HASAN BASHA.png',
+    photo: '/images/trainers/ANGADI HASAN BASHA.png',
     alt: 'Angadi Hasan Basha',
     introduction: 'Angadi Hasan Basha brings nine years of experience and an academic qualification in physical education from Rayalaseema University, Kurnool.',
     qualifications: [
@@ -97,7 +97,7 @@ const trainers: Trainer[] = [
     name: 'Rajesh Are',
     role: 'Official Zumba Instructor',
     experience: '7 years',
-    photo: 'public/images/trainers/RAJESH ARE.png',
+    photo: '/images/trainers/RAJESH%20ARE.png',
     alt: 'Rajesh Are, official Zumba instructor',
     introduction: 'Rajesh Are is an official Zumba instructor with seven years of experience helping members enjoy energetic, consistent movement training.',
     qualifications: [
