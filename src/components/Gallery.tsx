@@ -3,12 +3,49 @@ import { X, ZoomIn } from 'lucide-react';
 import { useReveal } from '@/hooks/useReveal';
 
 const galleryImages = [
-  { src: '/images/gallery/unnamed_(13).jpg', alt: 'Gym training area', span: 'lg:row-span-2' },
-  { src: '/images/gallery/unnamed_(17).jpg', alt: 'Gym equipment', span: '' },
-  { src: '/images/hero/unnamed_(1).jpg', alt: 'Treadmill area', span: '' },
-  { src: '/images/about/unnamed_(4).jpg', alt: 'Studio interior', span: 'lg:row-span-2' },
-  { src: '/images/trainers/unnamed_(9).jpg', alt: 'Training session', span: '' },
-  { src: '/images/gallery/unnamed_(13).jpg', alt: 'Workout space', span: '' },
+  '/images/gallery/18051.jpg',
+  '/images/gallery/18062.jpg',
+  '/images/gallery/18992.jpg',
+  '/images/gallery/18993.jpg',
+  '/images/gallery/18995.jpg',
+  '/images/gallery/19007.jpg',
+  '/images/gallery/19012.jpg',
+  '/images/gallery/19013.jpg',
+  '/images/gallery/19025.jpg',
+  '/images/gallery/19031.jpg',
+  '/images/gallery/19034.jpg',
+  '/images/gallery/19037.jpg',
+  '/images/gallery/19043.jpg',
+  '/images/gallery/19049.jpg',
+  '/images/gallery/19052.jpg',
+  '/images/gallery/19061.jpg',
+  '/images/gallery/19064.jpg',
+  '/images/gallery/19070.jpg',
+  '/images/gallery/19073.jpg',
+  '/images/gallery/19076.jpg',
+  '/images/gallery/19082.jpg',
+  '/images/gallery/19088.jpg',
+  '/images/gallery/19094.jpg',
+  '/images/gallery/19097.jpg',
+  '/images/gallery/19106.jpg',
+  '/images/gallery/19109.jpg',
+  '/images/gallery/19112.jpg',
+  '/images/gallery/19115.jpg',
+  '/images/gallery/19118.jpg',
+].map((src, index) => ({
+  src,
+  alt: `Reborn Fitness gallery photo ${index + 1}`,
+}));
+
+const spanClasses = [
+  '',
+  'lg:row-span-2',
+  'lg:col-span-2',
+  'lg:row-span-2 lg:col-span-2',
+  '',
+  'lg:row-span-2',
+  'lg:col-span-2',
+  '',
 ];
 
 export default function Gallery() {
@@ -32,18 +69,23 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 auto-rows-[250px] gap-4">
+        <div data-reveal className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[220px] gap-3 md:gap-4">
           {galleryImages.map((img, i) => (
             <div
               key={i}
-              data-reveal
-              className={`group relative rounded-3xl overflow-hidden cursor-pointer ${img.span}`}
+              className={`group relative rounded-3xl overflow-hidden cursor-pointer ${spanClasses[i % spanClasses.length]}`}
               onClick={() => setLightbox(img.src)}
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                width={640}
+                height={440}
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                style={{ willChange: 'transform' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">

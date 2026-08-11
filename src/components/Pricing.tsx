@@ -1,7 +1,7 @@
 import { Dumbbell, Music, Flame, Layers, UserCog, Check, Info } from 'lucide-react';
 import { useReveal } from '@/hooks/useReveal';
 
-type Tier = { label: string; price: string };
+type Tier = { label: string; price?: string };
 type Plan = {
   icon: typeof Dumbbell;
   title: string;
@@ -98,9 +98,8 @@ function PlanCard({ plan }: { plan: Plan }) {
 
       <div className="space-y-3 mb-6">
         {plan.tiers.map((tier) => (
-          <div key={tier.label} className="flex items-center justify-between rounded-xl bg-brand-dark/50 border border-brand-border px-4 py-3">
-            <span className="text-white/60 text-sm">{tier.label}</span>
-            <span className="text-lg font-bold text-white">{tier.price}</span>
+          <div key={tier.label} className="rounded-xl bg-brand-dark/50 border border-brand-border px-4 py-3">
+            <span className="text-white/70 text-sm">{tier.label}</span>
           </div>
         ))}
       </div>

@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <a href="#home" className="flex items-center gap-2 mb-5">
-              <img src="/images/logo/image.png" alt="Reborn Fitness Studio" className="h-12 w-auto max-w-[180px] object-contain" />
+              <img src="/images/logo/image.png" alt="Reborn Fitness Studio" className="h-12 w-auto max-w-[180px] object-contain mix-blend-screen" />
             </a>
             <p className="text-white/50 leading-relaxed mb-6">
               Transform your body and life at Reborn Fitness Studio. Premium training, expert coaches, real results.
