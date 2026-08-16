@@ -52,8 +52,16 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2 group">
-          <img src="/images/logo/image.png" alt="Reborn Fitness Studio" className="h-11 w-auto max-w-[160px] object-contain mix-blend-screen group-hover:scale-105 transition-transform duration-300" />
+        <a
+          href="#home"
+          className="flex items-center gap-2 group rounded-xl border border-white/10 bg-white/[0.02] px-2 py-1.5 shadow-[0_0_20px_rgba(255,255,255,0.04)] backdrop-blur-sm"
+          aria-label="Reborn Fitness Studio home"
+        >
+          <img
+            src="/images/reborn-logo.png"
+            alt="Reborn Fitness Studio"
+            className="logo w-[220px] h-auto object-contain block group-hover:scale-105 transition-transform duration-300 opacity-100"
+          />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">

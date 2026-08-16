@@ -10,8 +10,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <a href="#home" className="flex items-center gap-2 mb-5">
-              <img src="/images/logo/image.png" alt="Reborn Fitness Studio" className="h-12 w-auto max-w-[180px] object-contain mix-blend-screen" />
+            <a
+              href="#home"
+              className="inline-flex items-center gap-2 mb-5 rounded-xl border border-white/10 bg-white/[0.02] px-2 py-1.5 shadow-[0_0_20px_rgba(255,255,255,0.04)] backdrop-blur-sm"
+              aria-label="Reborn Fitness Studio home"
+            >
+              <img src="/images/reborn-logo.png" alt="Reborn Fitness Studio" className="logo w-[140px] h-auto object-contain block" />
             </a>
             <p className="text-white/50 leading-relaxed mb-6">
               Transform your body and life at Reborn Fitness Studio. Premium training, expert coaches, real results.
