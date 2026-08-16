@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: auto;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -20,6 +21,8 @@ body {
   font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -92,3 +95,66 @@ body {
 }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Gallery Performance Optimizations */
+#gallery {
+  contain: content;
+}
+
+/* Gallery item animation - ONE TIME ONLY, NO SCROLL TRACKING */
+@keyframes galleryItemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  opacity: 0;
+}
+
+.gallery-grid-hidden .gallery-item {
+  opacity: 0;
+  animation: none;
+}
+
+.gallery-grid-visible .gallery-item {
+  animation: galleryItemFadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.gallery-grid-visible .gallery-item:nth-child(1) { animation-delay: 0ms; }
+.gallery-grid-visible .gallery-item:nth-child(2) { animation-delay: 50ms; }
+.gallery-grid-visible .gallery-item:nth-child(3) { animation-delay: 100ms; }
+.gallery-grid-visible .gallery-item:nth-child(4) { animation-delay: 150ms; }
+.gallery-grid-visible .gallery-item:nth-child(5) { animation-delay: 200ms; }
+.gallery-grid-visible .gallery-item:nth-child(6) { animation-delay: 250ms; }
+.gallery-grid-visible .gallery-item:nth-child(7) { animation-delay: 300ms; }
+.gallery-grid-visible .gallery-item:nth-child(8) { animation-delay: 350ms; }
+.gallery-grid-visible .gallery-item:nth-child(9) { animation-delay: 400ms; }
+.gallery-grid-visible .gallery-item:nth-child(10) { animation-delay: 450ms; }
+.gallery-grid-visible .gallery-item:nth-child(11) { animation-delay: 500ms; }
+.gallery-grid-visible .gallery-item:nth-child(12) { animation-delay: 550ms; }
+.gallery-grid-visible .gallery-item:nth-child(13) { animation-delay: 600ms; }
+.gallery-grid-visible .gallery-item:nth-child(14) { animation-delay: 650ms; }
+.gallery-grid-visible .gallery-item:nth-child(15) { animation-delay: 700ms; }
+.gallery-grid-visible .gallery-item:nth-child(16) { animation-delay: 750ms; }
+.gallery-grid-visible .gallery-item:nth-child(17) { animation-delay: 800ms; }
+.gallery-grid-visible .gallery-item:nth-child(18) { animation-delay: 850ms; }
+.gallery-grid-visible .gallery-item:nth-child(19) { animation-delay: 900ms; }
+.gallery-grid-visible .gallery-item:nth-child(20) { animation-delay: 950ms; }
+
+.gallery-header {
+  opacity: 1;
+}
+
+/* Smooth scroll performance - backface visibility for transitions only */
+.transition-transform,
+.transition-opacity,
+.group-hover\:scale-105:hover {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
