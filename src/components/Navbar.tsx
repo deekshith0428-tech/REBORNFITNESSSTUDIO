@@ -54,13 +54,13 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
         <a
           href="#home"
-          className="flex items-center gap-2 group rounded-xl border border-white/10 bg-white/[0.02] px-2 py-1.5 shadow-[0_0_20px_rgba(255,255,255,0.04)] backdrop-blur-sm"
+          className="flex items-center group shrink-0"
           aria-label="Reborn Fitness Studio home"
         >
           <img
             src="/images/reborn-logo.png"
             alt="Reborn Fitness Studio"
-            className="logo w-[220px] h-auto object-contain block group-hover:scale-105 transition-transform duration-300 opacity-100"
+            className="logo w-[130px] h-auto object-contain block group-hover:scale-105 transition-transform duration-300 opacity-100"
           />
         </a>
 
